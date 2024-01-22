@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+
+    --accent: 214, 98%, 52%;
+    --accent-foreground: 0, 0%, 100%;
+
+    --connect-background: 0, 0%, 100%;
+    --connect-text: 213, 11%, 16%;
+    --connect-inner-background: 0, 0%, 95%;
+    --connect-error: 360, 100%, 64%;
+    --connect-error-text: 0, 0%, 100%;
+    --connect-shadow: 0px 8px 32px rgba(0, 0, 0, 0.32);
+    --connect-radius: 12px;
+
+    --modal: 0, 0%, 100%;
+    --modal-border: 0, 0%, 100%, 0;
+    --modal-text: 213, 11%, 16%;
+    --modal-text-secondary: 200, 1%, 55%;
+    --modal-shadow: 0px 8px 32px rgba(0, 0, 0, 0.32);
+    --modal-radius: 24px;
+
+    --menu: 180, 3%, 92%;
+    --border: 180, 0%, 94%;
+    --close-fill: 180, 3%, 39%;
+    --close-background: 0, 0%, 94%;
+    --close-border: 0, 0%, 91%;
+    --menu-button-radius: 12px;
+    --menu-action-button-radius: 9999px;
+
+    --profile-foreground: 0, 0%, 96%;
+    --profile-action: 0, 0%, 100%;
+    --profile-hover: 0, 0%, 98%;
+
+    /*  */
+
+    --gradient: linear-gradient(to top left,#16BFFD,#CB3066);
+
+    --background: 208 63.699999999999996% 4.32%;
+    --foreground: 208 9.8% 97.7%;
+
+    --muted: 208 49% 16.200000000000003%;
+    --muted-foreground: 208 9.8% 55.4%;
+
+    --popover: 208 45.4% 7.0200000000000005%;
+    --popover-foreground: 208 9.8% 97.7%;
+
+    --card: 208 45.4% 7.0200000000000005%;
+    --card-foreground: 208 9.8% 97.7%;
+
+    /* --border: 208 49% 16.200000000000003%; */
+    --input: 208 49% 16.200000000000003%;
+
+    --primary: 208 98% 54%;
+    --primary-foreground: 208 9.8% 5.4%;
+
+    --secondary: 208 49% 16.200000000000003%;
+    --secondary-foreground: 208 9.8% 97.7%;
+
+    /* --accent: 208 49% 16.200000000000003%;
+    --accent-foreground: 208 9.8% 97.7%; */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 208 9.8% 97.7%;
+
+    --ring: 208 98% 54%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border antialiased selection:bg-accent selection:text-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
