@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 import { useCallback, useState } from 'react'
 import { CustomMode } from './custom-mode'
 import { colord } from 'colord'
+import { HeroTitle } from '../_shared/hero-title'
 
 type ModeVariant = {
   value: string
@@ -125,7 +126,8 @@ export const Mode = () => {
 
   return (
     <div className="flex items-start justify-between flex-col w-full">
-      <h6 className="text-xs font-medium mb-2">Mode</h6>
+      <HeroTitle className="mb-2" popoverText='Modals background and hover states.'>Mode</HeroTitle>
+
       <div className="flex items-center justify-between w-full">
         {MODES.map((mode) => (
           <Circle

@@ -2,6 +2,7 @@
 
 import { colord, random as crandom } from 'colord'
 import { Dices, Minus, Plus, RotateCcw } from 'lucide-react'
+import { HeroTitle } from './_shared/hero-title'
 
 export const Manipulator = ({
   col,
@@ -32,9 +33,9 @@ export const Manipulator = ({
   }
 
   return (
-    <div className="w-full flex gap-10">
+    <div className="w-full flex sm:gap-10 gap-3 sm:justify-start justify-between">
       <div className="flex flex-col gap-1 items-center justify-center">
-        <h6 className="text-xs font-medium mb-2">Saturation</h6>
+        <HeroTitle className="mb-2">Saturation</HeroTitle>
         <div className="flex gap-3.5">
           <button
             type="button"
@@ -54,7 +55,7 @@ export const Manipulator = ({
       </div>
 
       <div className="flex flex-col gap-1 items-center justify-center">
-        <h6 className="text-xs font-medium mb-2">Lightness</h6>
+        <HeroTitle className="mb-2">Lightness</HeroTitle>
         <div className="flex gap-3.5">
           <button
             type="button"
@@ -74,7 +75,7 @@ export const Manipulator = ({
       </div>
 
       <div className="flex flex-col gap-1 items-center justify-center">
-        <h6 className="text-xs font-medium mb-2">Random</h6>
+        <HeroTitle className="mb-2">Random</HeroTitle>
         <button
           type="button"
           className="hover:scale-110 transition-all duration-150 flex items-center justify-center"
@@ -85,7 +86,7 @@ export const Manipulator = ({
       </div>
 
       <div className="flex flex-col gap-1 items-center justify-center">
-        <h6 className="text-xs font-medium mb-2">Reset</h6>
+        <HeroTitle className="mb-2">Reset</HeroTitle>
         <button
           type="button"
           className="hover:scale-110 transition-all duration-150 flex items-center justify-center"

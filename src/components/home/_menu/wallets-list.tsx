@@ -19,7 +19,7 @@ export const WalletsList = () => {
         More
       </p>
       <div className="flex flex-col gap-1">
-        <WalletButton name="argent" recent />
+        <WalletButton name="argent" />
         <WalletButton name="trust" />
         <WalletButton name="omni" />
         <WalletButton name="ledger" />

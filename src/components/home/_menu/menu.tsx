@@ -5,15 +5,18 @@ import { Description } from './description'
 
 export const Menu = () => {
   return (
-    <div className="w-[720px] h-[500px] bg-modal flex rounded-modal border border-modal-border text-modal-text shadow-modal transition-all duration-150">
-      <div className="w-[287px] min-w-[287px] p-4 flex flex-col">
-        <h6 className="text-lg font-extrabold mb-6 ml-1.5">Connect a Wallet</h6>
+    <div className="md:w-[720px] w-[360px] h-[500px] bg-modal flex rounded-modal border border-modal-border text-modal-text shadow-modal transition-all duration-150">
+      <div className="md:w-[287px] w-[360px] min-w-[287px] p-4 flex flex-col">
+        <h6 className="text-lg font-extrabold mb-6 ml-1.5 md:text-left text-center relative">
+          Connect a Wallet
+          <CloseButton className='inline-flex md:hidden absolute right-0' />
+        </h6>
         <WalletsList />
       </div>
 
-      <Separator orientation="vertical" />
+      <Separator orientation="vertical" className="md:block hidden" />
 
-      <div className="grow p-4 pb-16 text-modal-text">
+      <div className="grow p-4 pb-16 text-modal-text w-[430px] md:block hidden">
         <div className="flex w-full justify-end mb-3">
           <CloseButton />
         </div>

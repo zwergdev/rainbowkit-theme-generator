@@ -1,17 +1,15 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import '@rainbow-me/rainbowkit/styles.css'
 import './globals.css'
 import { Header } from '@/components/home/header'
 import { Footer } from '@/components/home/footer'
-import { Toaster } from '@/components/ui/sonner'
 
 const inter = Inter({ subsets: ['latin'] })
 
 const title = 'RainbowKit Theme Generator'
 const description =
-  'Easily create custom RainbowKit theme from a single colour that you can copy and paste into your web3 apps.'
-const url = 'https://rainbowkit-theme-generator.vercel.app'
+  'Easily create custom RainbowKit theme from a single color that you can copy and paste into your web3 apps.'
+const url = 'https://rainbowkit-theme.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -43,18 +41,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <Web3Provider> */}
         <div className="flex flex-col w-full items-center justify-center min-h-screen relative overflow-hidden">
           <Header />
-          <main className="container flex flex-col w-full items-center justify-center pb-10 pt-20">
+          <main className="container sm:px-8 px-4 flex flex-col w-full items-center justify-center pb-10 pt-20">
             {children}
             <div className="grow" />
           </main>
           <div className="grow" />
           <Footer />
         </div>
-        {/* </Web3Provider> */}
-        <Toaster />
       </body>
     </html>
   )

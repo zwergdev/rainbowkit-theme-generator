@@ -23,6 +23,7 @@
     --modal-shadow: 0px 8px 32px rgba(0, 0, 0, 0.32);
     --modal-radius: 24px;
 
+
     --menu: 180, 3%, 92%;
     --border: 180, 0%, 94%;
     --close-fill: 180, 3%, 39%;
@@ -30,6 +31,8 @@
     --close-border: 0, 0%, 91%;
     --menu-button-radius: 12px;
     --menu-action-button-radius: 9999px;
+    --download-top-card-background: 'linear-gradient(126deg, rgba(171, 171, 171, 0.2) 9.49%, rgba(255, 255, 255, 0) 71.04%), #FFFFFF';
+    --download-bottom-card-background: 'linear-gradient(126deg, rgba(255, 255, 255, 0) 9.49%, rgba(171, 171, 171, 0.04) 71.04%), #FFFFFF';
 
     --profile-foreground: 0, 0%, 96%;
     --profile-action: 0, 0%, 100%;
@@ -51,7 +54,6 @@
     --card: 208 45.4% 7.0200000000000005%;
     --card-foreground: 208 9.8% 97.7%;
 
-    /* --border: 208 49% 16.200000000000003%; */
     --input: 208 49% 16.200000000000003%;
 
     --primary: 208 98% 54%;
@@ -59,9 +61,6 @@
 
     --secondary: 208 49% 16.200000000000003%;
     --secondary-foreground: 208 9.8% 97.7%;
-
-    /* --accent: 208 49% 16.200000000000003%;
-    --accent-foreground: 208 9.8% 97.7%; */
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 208 9.8% 97.7%;

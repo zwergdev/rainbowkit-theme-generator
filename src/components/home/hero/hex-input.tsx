@@ -1,4 +1,5 @@
 import { HexColorInput } from 'react-colorful'
+import { HeroTitle } from './_shared/hero-title'
 
 export const HexInput = ({
   color,
@@ -7,9 +8,7 @@ export const HexInput = ({
 }: { color: string; onChange: (c: string) => void; isPopover?: boolean }) => {
   return (
     <div>
-      {!isPopover && (
-        <h6 className="text-xs font-medium mb-1.5">Or enter a HEX value</h6>
-      )}
+      {!isPopover && <HeroTitle>Or enter a HEX value</HeroTitle>}
       <HexColorInput
         color={color}
         onChange={onChange}

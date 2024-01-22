@@ -1,13 +1,14 @@
 import { Button } from '@/components/ui/button'
 import { Dropdown } from '@/components/ui/icons'
+import { WrongNetwork } from './wrong-network'
 
 export const ButtonsList = () => {
   return (
-    <div className="flex items-center justify-center gap-7">
-      <Button>Connect Wallet</Button>
+    <div className="flex md:justify-start items-center justify-center sm:flex-row w-full flex-col sm:gap-7 gap-3 flex-wrap">
+      <Button className='order-1'>Connect Wallet</Button>
 
-      <div className="flex gap-3">
-        <Button variant="secondary">
+      <div className="flex sm:order-2 order-3 sm:flex-row items-center flex-col gap-3">
+        <Button variant="secondary" className="w-[153px]">
           <div
             className="w-6 h-6 rounded-full bg-center"
             style={{
@@ -31,9 +32,7 @@ export const ButtonsList = () => {
         </Button>
       </div>
 
-      <Button variant="error" size="error">
-        Wrong Network <Dropdown />
-      </Button>
+      <WrongNetwork />
     </div>
   )
 }

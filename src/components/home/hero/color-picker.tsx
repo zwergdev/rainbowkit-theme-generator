@@ -3,12 +3,13 @@
 import { colord, extend } from 'colord'
 import { useState } from 'react'
 import { HexColorPicker } from 'react-colorful'
-import { RadiusPicker } from '@/components/home/hero/radius-picker'
+import { RadiusPicker } from './radius/radius-picker'
 import { HexInput } from './hex-input'
 import { Manipulator } from './manipulator'
 import { CopyCode } from './copy-code'
-import { Mode } from '@/components/home/hero/mode'
+import { Mode } from './mode/mode'
 import a11yPlugin from 'colord/plugins/a11y'
+import { HeroTitle } from './_shared/hero-title'
 
 extend([a11yPlugin])
 
@@ -24,23 +25,20 @@ export const ColorPicker = () => {
     document.documentElement.style.setProperty('--accent', `${h} ${s}% ${l}%`)
     setColor(c)
 
-    set(
-      'accent-foreground',
-      colord(c).isReadable('#ffffff') ? '0, 0%, 100%' : '225, 0%, 0%',
-    )
+    set('accent-foreground', colord(c).isDark() ? '0, 0%, 100%' : '225, 0%, 0%')
   }
 
   return (
-    <div className="w-[625px] h-[300px] flex gap-7 items-end pl-14">
+    <div className="max-w-[625px] w-full sm:flex-row flex-col flex gap-7 sm:items-end items-center justify-center md:pl-14 pl-0">
       <div className="flex flex-col items-start justify-center">
-        <h6 className="text-xs font-medium mb-1.5">Pick accent color</h6>
+        <HeroTitle>Pick accent color</HeroTitle>
         <HexColorPicker color={color} onChange={onChange} className="mb-7" />
         <HexInput color={color} onChange={onChange} />
       </div>
       <div className="flex flex-col items-start justify-center w-full gap-7">
         <Manipulator col={color} onChange={onChange} />
         <RadiusPicker />
-        <div className="flex items-end justify-between w-full gap-7">
+        <div className="flex items-end justify-between w-full sm:gap-7 gap-3 ">
           <CopyCode />
           <Mode />
         </div>
