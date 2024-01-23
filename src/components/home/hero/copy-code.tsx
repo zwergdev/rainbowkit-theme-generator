@@ -54,7 +54,7 @@ export const CopyCode = () => {
             <span className="block">{'<RainbowKitProvider />'}</span>
           </DialogDescription>
         </DialogHeader>
-        <pre className="flex items-center justify-center relative">
+        <pre className="flex items-center justify-center relative overflow-hidden">
           <button
             type="button"
             disabled={theme === undefined || isCopied}
@@ -67,7 +67,7 @@ export const CopyCode = () => {
               <Copy size={14} strokeWidth={3} />
             )}
           </button>
-          <code className="relative rounded border border-muted-foreground/25 bg-background px-2 w-full py-1 font-mono text-sm font-medium overflow-scroll max-w-[400px] max-h-[450px]">
+          <code className="relative rounded border border-muted-foreground/25 flex bg-background px-2 w-full py-1 font-mono text-sm font-medium overflow-scroll max-h-[450px]">
             {theme}
           </code>
         </pre>
