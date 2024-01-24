@@ -10,7 +10,7 @@ export function generateCopy() {
     accentColorForeground: 'hsl(${get('--accent-foreground')})',
     actionButtonBorder: 'hsl(${get('--modal')})',
     actionButtonBorderMobile: 'hsl(${get('--modal')})',
-    actionButtonSecondaryBackground: 'hsl(${get('--accent')})',
+    actionButtonSecondaryBackground: 'hsl(${get('--accent-foreground')})',
     closeButton: 'hsl(${get('--close-fill')})',
     closeButtonBackground: 'hsl(${get('--close-background')})',
     connectButtonBackground: 'hsl(${get('--connect-background')})',

@@ -47,7 +47,7 @@ export const CopyCode = () => {
             <span className="block mt-2">
               {'<RainbowKitProvider theme={'}
               <span className="text-white">customTheme</span>
-              {'} {...etc}>'}
+              {'}>'}
             </span>
 
             <span className="block ml-4">{'...'}</span>
